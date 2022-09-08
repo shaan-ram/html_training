@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <script>
+        function storeInfo(){
+            var info={
+            uname : document.getElementById("uname").value,
+            uage : document.getElementById("umail").value,
+            uphone : document.getElementById("uphone").value
+        };
+        //console.log("user Info", info);
+
+        localStorage.setItem("user"+localStorage.length, JSON.stringify(info));
+        };
+     function clearInfo(){
+        // a = JSON.parse(localStorage.getItem("user"))
+
+        //     alert(a.uage)
+        localStorage.clear();
+        }
+     function getKeyName(){
+            alert( localStorage.key(0) );
+        }
+        
+     function getLength(){
+            alert( localStorage.length );
+        }
+        
+    </script>
+</head>
+<body>
+
+        <table border="1px">
+            <tbody>
+                <tr>
+                    <th>User name</th>
+                    <td> <input id="uname" name="uname" type="text"/></td>
+                </tr>
+                <tr>
+                    <th>User email</th>
+                    <td> <input id="umail" name="email" type="email"/></td>
+                </tr>
+                <tr>
+                    <th>User phone</th>
+                    <td> <input id="uphone" name="phone" type="tel"/></td>
+                </tr>
+            </tbody>
+        </table>
+  <input onclick="storeInfo()" type="submit" value="Register"/>
+  <button onclick="clearInfo()">clear</button>
+  <button onclick="getKeyName()">Get Key</button>
+</body>
+</html>

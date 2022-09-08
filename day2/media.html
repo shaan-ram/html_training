@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>current time : <output id="op"></output></h1>
+    <video id="vid" width="400" height="400" loop poster="images/thor.jpg">
+        <source src="media/html5.mp4">
+        <source src="media/html5.webm">
+    </video>
+
+    <!-- <audio id="aud" volume="0.5" loop>
+        <source src="#">
+        <source src="#"> -->
+
+    <button id="a" onclick="playvid()">Play</button>
+    <button id="b" onclick="pausevid()">Pause</button>
+    <button id="c" onclick="stopvid()">Stop</button>
+    <button id="d" onclick="rewindvid()">Rewind</button>
+    <button id="e" onclick="forvid()">forward</button>
+    <!-- <button id="f" onclick="volup()">Volume Increase</button>
+    <button id="g" onclick="voldown()">Volume Decrease</button> -->
+
+ <script>
+    setInterval(function(){
+        document.getElementById("op").value =  document.getElementById("vid").currentTime
+    },10)
+    function playvid(){
+        document.getElementById("vid").play();
+    }
+    function pausevid(){
+        document.getElementById("vid").pause();
+    }
+    function stopvid(){
+        document.getElementById("vid").currentTime=0;
+        document.getElementById("vid").pause();
+    }
+    function rewindvid(){
+        document.getElementById("vid").currentTime -= 1;
+    }
+    function forvid(){
+        document.getElementById("vid").currentTime += 1;
+    }
+    // function volup(){
+    //     document.getElementById("aud").volume += 0.1;
+    // }
+    // function voldown(){
+    //     document.getElementById("aud").volume += 0.1;
+    // }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas 2d</title>
+    <style>
+        canvas{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="500px" height="500px" ></canvas>
+    
+<script>
+    var can = document.getElementById("can");
+    var ctx = can.getContext("2d");
+    ctx.font = "bold  45px arial";
+    ctx.fillStyle = "Green";
+    ctx.scale (2,2);
+    // ctx.rotate((Math.PI/180)*45)
+    ctx.fillText("Shaan Ram",0,125);
+    ctx.translate(0,20);
+    ctx.font = "bold  45px arial";
+    ctx.fillStyle = "Blue"
+    ctx.fillText("")
+    
+</script>    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+    <h1> Registration form</h1>
+    <form action="#" method="get">
+        <table>
+            <tbody>
+                <tr>
+                    <th>User name</th>
+                    <td> <input autofocus required  name="uname" placeholder="Enter full name" type="text"/></td>
+                </tr>
+                <tr>
+                    <th>User email</th>
+                    <td> <input name="email" required pattern="\S+@\S+\.\S+" placeholder="Offical email" type="email"/></td>
+                </tr>
+                <tr>
+                    <th>User phone</th>
+                    <td> <input name="phone" title="###-####-####" required pattern="\d{3}-\d{4}-\d{4}" placeholder="your phone no" type="tel"/></td>
+                </tr>
+                <tr>
+                    <th>&nbsp;</th>
+                    <td> <input type="submit" value="Register"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <datalist id="shh">
+        <option value="Full stack"></option>
+        <option value="Java"></option>
+        <option value="Python"></option>
+        <option value="Spring"></option>
+        <option value="Angular"></option>
+        <option value="C#"></option>
+    </datalist>
+    <input list="shh">
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Animation </title>
+    <style>
+        canvas{
+           
+            display: block;
+            border: 5px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <!-- <canvas width="500" height="500" id="can"></canvas>
+    <script>
+        var boxX = 0;
+        var ctx = document.getElementById("can").getContext("2d");
+        setInterval(function(){
+            //ctx.clearRect(0,0,500,500 );
+            ctx.arc(boxX,100,100,0,(Math.PI/180)*360,true);
+            ctx.stroke()
+            boxX+=10;
+            if(boxX > 500){
+                boxX =0;
+            }
+        },10)
+    </script> -->
+
+    <canvas width="1500" height="1000" id="can"></canvas>
+    <script>
+        var ctx = document.getElementById("can").getContext("2d");
+        setInterval(function(){
+            var arcX = Math.round(Math.random()*800);
+            var arcY = Math.round(Math.random()*500);
+            var arcD= Math.round(Math.random()*50);
+            var red = Math.round(Math.random()*255);
+            var green = Math.round(Math.random()*0);
+            var blue = Math.round(Math.random()*255);
+            ctx.beginPath();
+            ctx.fillStyle = "rgb(255, 0, "+blue+")";
+            ctx.arc(arcX, arcY, arcD,0,(Math.PI/180)*360,true);
+            ctx.fill()
+            ctx.stroke();
+        },100);
+        setInterval(function(){
+            var arcX = Math.round(Math.random()*800);
+            var arcY = Math.round(Math.random()*500);
+            var arcD= Math.round(Math.random()*50);
+            var red = Math.round(Math.random()*255);
+            var green = Math.round(Math.random()*255);
+            var blue = Math.round(Math.random()*255);
+            ctx.beginPath();
+            ctx.fillStyle = "rgb(255, "+green+", 0)";
+            ctx.arc(arcX, arcY+500, arcD,0,(Math.PI/180)*360,true);
+            ctx.fill()
+            ctx.stroke();
+        },100);
+        setInterval(function(){
+            var arcX = Math.round(Math.random()*800);
+            var arcY = Math.round(Math.random()*500);
+            var arcD= Math.round(Math.random()*50);
+            var red = Math.round(Math.random()*255);
+            var green = Math.round(Math.random()*255);
+            var blue = Math.round(Math.random()*255);
+            ctx.beginPath();
+            ctx.fillStyle = "rgb("+red+", "+green+", 0)";
+            ctx.arc(arcX+800, arcY, arcD,0,(Math.PI/180)*360,true);
+            ctx.fill()
+            ctx.stroke();
+        },100);
+        setInterval(function(){
+            var arcX = Math.round(Math.random()*800);
+            var arcY = Math.round(Math.random()*500);
+            var arcD= Math.round(Math.random()*50);
+            var red = Math.round(Math.random()*255);
+            var green = Math.round(Math.random()*255);
+            var blue = Math.round(Math.random()*255);
+            ctx.beginPath();
+            ctx.fillStyle = "rgb("+red+", 0,"+blue+")";
+            ctx.arc(arcX+800, arcY+500, arcD,0,(Math.PI/180)*360,true);
+            ctx.fill()
+            ctx.stroke();
+        },100);
+        </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Image</title>
+<style>
+    canvas{
+        border: 2px solid blueviolet
+    }
+</style>
+</head>
+<body>
+    <canvas width="500" height="500" id="can"></canvas>
+<script>
+    var ctx = document.getElementById("can").getContext("2d");
+
+   /* var img1 = new Image();
+    img1.src = "image/thor.jpg";
+    img1.onload = function(){
+        // ctx.rotate((Math.PI / 180) * 15);
+        ctx.drawImage(img1,290,0);
+    }
+    var img2 = new Image();
+    img2.src = "image/hulk.jpg";
+    img2.onload = function(){
+        // ctx.rotate((Math.PI / 180) * 25);
+        ctx.drawImage(img2,0,0);
+    }*/
+
+    // ctx.beginPath();
+    // ctx.strokeStyle = "red";
+    // ctx.fillStyle = "yellow";
+    // ctx.moveTo(100,100);
+    // ctx.lineTo(200,100);
+    // ctx.lineTo(200,200);
+    // ctx.lineTo(100,200);
+    // ctx.lineTo(100,100);
+    // ctx.fill();
+    // ctx.stroke();
+
+    ctx.beginPath();
+    ctx.strokeStyle = "red";
+    for(var i=10; i<=500; i+=10){
+        ctx.moveTo(i,i);
+        ctx.lineTo(i,500);
+    }
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    for(var i=10; i<=500; i+=10){
+        ctx.moveTo(i,i);
+        ctx.lineTo(500,i);
+    }
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    for(var i=10; i<=500; i+=10){
+        ctx.moveTo(i,0);
+        ctx.lineTo(i,i);
+    }
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    for(var i=10; i<=500; i+=10){
+        ctx.moveTo(i,i);
+        ctx.lineTo(i,i);
+    }
+    ctx.stroke();
+</script>
+</body>
+</html>
