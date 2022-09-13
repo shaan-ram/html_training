@@ -18,8 +18,7 @@
             background-color: tomato;
             padding: 10px;
             margin: 10px;
-            
-            width: 70%;
+            width: 75%;
             
         }
         #sec{
@@ -38,6 +37,7 @@
         article{
             background-color: darkslategrey;
             margin: 10px;
+            border: 2px solid black;
         }
         .Hone{
             background-color: green;
@@ -45,8 +45,10 @@
             line-height: 30px;
             padding: 5px;
         }
+        .Htwo{
+            margin: 10px;
+        }
         footer{
-            text-align: center;
             background-color: violet;
             margin: 10px;
             line-height: 40px;
@@ -55,7 +57,11 @@
             
             float: right;
             background-color: yellow;
-            height: 400px;
+            height: 325px;
+            width: 250px;
+            text-align: center;
+            margin: 10px; 
+            margin-top: -1px;
         }
 
     </style>
@@ -68,7 +74,14 @@
         <header id="head">
             <h1>WELCOME</h1>
         </header>
-        <main>
+        <aside>
+            <header class="Htwo"> ASIDE <br> Header</header>
+            <input type="text" style="height: 30px;" ><br><br>
+            <input type="text" style="height: 30px;"><br><br>
+            <input type="text" style="height: 30px;"><br><br>
+            <input type="text" style="height: 30px;"><br><br>
+         </aside>
+         <main>
             <h2> <center> Main</center> </h2>
             <section> <span id="sec">Section</span> 
             <header class="Hone">Header</header>
@@ -76,11 +89,8 @@
             <article class="two"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sunt tempora repellendus cupiditate, sint assumenda maxime blanditiis quod doloribus sapiente et possimus rerum quidem voluptatem excepturi quas, distinctio voluptate dolore.</article>
             <article class="three">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, illum dicta! Praesentium quisquam amet ea, nemo culpa natus libero sequi quo corporis sunt, cumque iste explicabo molestias, quis temporibus! Consectetur.</article>
         </section>
-        </main>
-        <footer> &copy; copyrights reserved by ...</footer>
-        <!-- <aside> ASIDE
-            <header class="Htwo"> Header</header>
-        </aside> -->
+    </main>
+    <footer> <center>&copy; copyrights reserved by ...</center></footer>
 
 
     </div>
