@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img[alt ^= 'i']{  /*   ^ anything that starts with */
+            border: 5px solid blueviolet;
+        }
+        img[src $= 'man.jpg']{  /*   $ anything that ends with "man" */
+            border: 5px solid orangered;
+        }
+        img[alt *= ta]{   /*   * anything that has "ta"   */
+            border: 5px solid gold ;
+        } 
+                    
+    </style>
+
+</head>
+<body>
+    <img src="images/thor.jpg" alt="thor">
+    <img src="images/ironman.jpg" alt="ironman">
+    <img src="images/batman.jpg" alt="batman">
+    <img src="images/captainamerica.jpg" alt="captainamerica">
+    <img src="images/hulk.jpg" alt="hulk">
+</body>
+</html>
