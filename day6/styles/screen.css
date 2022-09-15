@@ -1,0 +1,17 @@
+section{
+    height: 200px;
+    width: 800px;
+    background-color: yellowgreen;
+    line-height: 200px;
+   
+}
+article{
+    display: inline-block;
+    background-color: tomato;
+    height: 50px;
+    margin: 5px;
+    width: 120px;
+    line-height: 50px;
+    text-align: center;
+    font-weight:bold ;
+}

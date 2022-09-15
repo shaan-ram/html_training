@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link media="screen and (max-width:1200px)" rel="stylesheet" href="styles/recreate.css">
+
+</head>
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    
+    article:nth-of-type(1){
+        font-family: 'Bebas Neue', cursive;
+        font-size: 200px;
+        text-align: center;
+    }
+    .par1{
+        font-size: 20px;
+        padding: 20px;
+    }
+    img{
+        width: 100%;
+        }
+    .circle{
+        background-color: red;
+        height: 150px;
+        width: 200px;
+        text-align: center;
+        line-height: 150px;
+        border-radius: 50%;
+    }
+    .circle span{
+        font-size: 50px;
+    }
+    .heading{
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        font-size: 40px;
+        text-align: center;
+    }
+    .dot{
+        font-size:20px ;
+    }
+    a:link{
+        text-decoration: none;
+    }
+    .par2{
+        text-align: justify;
+        font-size: 20px;
+    }
+    .logos{
+        display: flex;
+        gap: 3rem;
+        text-align: center;
+        }
+    .hide_margin{
+        margin-top: -12px;
+    }
+
+    
+        
+    </style>
+<body>
+    <div class="container"><article>A List Apart</article>
+        <img class="responsive" id="a" src="https://149572954.v2.pressablecdn.com/wp-content/uploads/2013/01/ALA306_respdesign_300.png">
+
+
+
+        <script>
+             
+             window.addEventListener('resize', function(event){
+             if(window.innerWidth < 800){
+              
+                 document.getElementById("a").src = "https://alistapart.com/wp-content/uploads/2019/05/rwd-3_1500_1078_81.jpg"
+             }
+             if(window.innerWidth > 800){
+              
+              document.getElementById("a").src = "https://149572954.v2.pressablecdn.com/wp-content/uploads/2013/01/ALA306_respdesign_300.png"
+          }
+         });
+         </script>        
+
+        <div class="circle col-xs-12 ">Issue No.<span>306</span></div>
+        <div class="heading col-xs-12 ">Responsive Web Design</div>
+        <p class = "dot col-xs-12 text-center">by <b><span> <a href="#">Ethan Marcotte</a> </span></b><span class="posted-on"><time class="entry-date published" datetime="2010-05-25T09:59:00-04:00"> &#183; May 25, 2010</time></span></p>
+        <p class="line3 col-xs-12 text-center">Published in <a href="#"> CSS, Interaction Design, Layout & Grids, Mobile/Multidevice, Responsive Design</a></p>
+        <article class="par1 col-xs-12 "> <b>The control which designers know in the print medium, and often desire in the web medium, is simply a function of the limitation of the printed page. We should embrace the fact that the web does not have the same constraints, and design for this flexibility. But first, we must 'accept the ebb and flow of things.'</b> </article>
+        <p class="john col-xs-12 text-center">-John Allsopp, “A Dao of Web Design”</p>
+        <p class="par2 col-xs-12 ">The English architect Christopher Wren once quipped that his chosen field “aims for Eternity,” and there’s something appealing about that formula: Unlike the web, which often feels like aiming for next week, architecture is a discipline very much defined by its permanence.</p> <br><br>
+        <div class="par3 col-xl-8 col-lg-4">A building’s foundation defines its footprint, which defines its frame, which shapes the facade. Each phase of the architectural process is more immutable, more unchanging than the last. Creative decisions quite literally shape a physical space, defining the way in which people move through its confines for decades or even centuries.</div>
+        <div class="par4 col-xl-8 col-lg-4"><p>A flexible foundation</p>
+            <img src="https://i0.wp.com/alistapart.com/wp-content/uploads/2012/07/f-img-default-wide.jpg?w=960&ssl=1" alt="">
+
+            <p class="h6 font-italic font-weight-normal">Huge images are huge. Our layout, flexible though it is, doesn’t respond well to changes in resolution or viewport size.</p>
+        </div>
+        <div class="par3 col-xl-8 col-lg-4 equal_margin">
+            <a href="#" class="btn btn-primary btn-lg active" style="background-color: coral; font-size: 25px; width: 100%; border: 1px solid transparent;">Become a patron</a>
+        </div>
+
+        <div class="row division equal_margin">
+            <div class="par4 col-xl-8 col-lg-4">
+                <p>Translations</p>
+                <hr class="hide_margin">
+            </div>
+            <div class="par4 col-xl-8 col-lg-4">
+                <p>Italian</p>
+                <hr class="hide_margin">
+            </div>
+            <div class="par4 col-xl-8 col-lg-4">
+                <p>French</p>
+                <hr class="hide_margin">
+            </div>
+            <div class="par4 col-xl-8 col-lg-4">
+                <p>Czech</p>
+                <hr class="hide_margin">
+            </div>
+            <div class="par4 col-xl-8 col-lg-4">
+                <p>Spanish</p>
+                <hr class="hide_margin">
+            </div>
+            <div class="par4 col-xl-8 col-lg-4">
+                <p>Lithuanian</p>
+                <hr class="hide_margin">
+            </div>
+            <div class="par4 col-xl-8 col-lg-4">
+                <p>Portugese</p>
+                <hr class="hide_margin">
+            </div>
+            <div class="par4 col-xl-8 col-lg-4">
+                <p>German</p>
+                <hr class="hide_margin">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
