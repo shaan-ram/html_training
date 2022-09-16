@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote</title>
+    <script>
+        var x =["“Love your Enemies, for they tell you your Faults.”","“He that falls in love with himself will have no rivals.”","“There never was a good war or a bad peace.”","“He that lies down with Dogs, shall rise up with fleas.”",
+        "“Better slip with foot than tongue.”","“Look before, or you’ll find yourself behind.”","“Don’t throw stones at your neighbors, if your own windows are glass.”","“He that would live in peace & at ease, Must not speak all he knows or judge all he sees.”",
+        "“Hide not your Talents, they for Use were made. What’s a Sun-Dial in the shade!”","“Wish not so much to live long as to live well.”"];
+       
+
+        
+        window.onload = function(){ 
+            var red = Math.round(Math.random()*255);
+            var green = Math.round(Math.random()*255);
+            var blue = Math.round(Math.random()*255);
+            document.getElementById("op").innerHTML = x[Math.floor((Math.random()*x.length))]
+            document.getElementById("op").style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
+           
+            setInterval(function () {
+            document.getElementById("op").innerHTML =  x[Math.floor((Math.random()*x.length))]
+            
+            var red = Math.round(Math.random()*255);
+            var green = Math.round(Math.random()*255);
+            var blue = Math.round(Math.random()*255);
+            document.getElementById("op").style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
+
+            }, 2000);
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+        h1{
+            font-family: 'Secular One', sans-serif;
+            color: gray;
+        }
+        #op{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border: 1px solid black;
+            margin: 100px auto;
+            width: 50%;
+            font-size: larger;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>BENJAMIN FRANKLIN'S QUOTE</center></h1>
+    <div id="op"></div>
+</body>
+</html>

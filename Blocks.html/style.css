@@ -1,0 +1,132 @@
+@keyframes shaan{
+    from{
+        background-color:lime;
+    }
+    to{
+        transform: scale(0.5);
+    }
+}
+
+#container{
+    margin: 100px auto;
+    border: 2px solid black;
+    padding: 10px;
+    width: 500px;
+    
+}
+#row1{
+    display: flex;
+}
+#row2{
+    display: flex;
+}
+#row3{
+    display: flex;
+}
+#row4{
+    display: flex;
+}
+#header{
+    background-color: purple;
+    margin-bottom: 10px;
+    line-height: 50px;
+    color: whitesmoke;
+    text-align: center;
+}
+#Box1{
+    background-color: blue;
+    height: 150px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+#Box1:hover{
+    animation-name: shaan;
+    animation-duration: 1s;
+
+}
+#Box2{
+    background-color:  midnightblue;
+    height: 250px;
+    width: 290px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#Box2:hover{
+    animation-name: shaan;
+    animation-duration: 1s;
+
+}
+#Box3{
+    background-color: rgb(0, 255, 140);
+    height: 110px;
+    width: 200px;
+    margin-top:-100px;
+    padding-bottom: 100px;
+}
+#Box3:hover{
+    animation-name: shaan;
+    animation-duration: 1s;
+
+}
+#Box4{
+    background-color: rgb(255, 0, 0);
+    height: 110px;
+    width: 290px;
+    margin: 0 0 10px 10px;
+}
+#Box4:hover{
+    animation-name: shaan;
+    animation-duration: 1s;
+
+}
+#Box5{
+    background-color:darkgreen;
+    height: 100px;
+    width: 350px;    
+    margin-right: 10px;
+    
+}
+#Box5:hover{
+    animation-name: shaan;
+    animation-duration: 1s;
+
+}
+#Box6{
+    background-color:cyan;
+    height: 100px;
+    width: 140px;
+}
+#Box6:hover{
+    animation-name: shaan;
+    animation-duration: 1s;
+
+}
+#Box7{
+    background-color:darkslategray;
+    height: 100px;
+    width: 120px;
+    margin-top: 10px;
+}
+#Box7:hover{
+    animation-name: shaan;
+    animation-duration: 1s;
+
+}
+#Box8{
+    background-color: rgb(255, 208, 0);
+    height: 100px;
+    width: 370px;
+    margin: 10px 0 0 10px;
+}
+#Box8:hover{
+    animation-name: shaan;
+    animation-duration: 1s;
+
+}
+#footer{
+    background-color: purple;
+    margin-top: 10px;
+    line-height: 50px;
+    color: whitesmoke;
+    text-align: center;
+}
