@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onload="onLoad()">
+    <h3>• Practice events, onload, ondoubleclick, onmouseover</h3>
+    <div id="div1" ondblclick="doubleClick()" onmouseover="mouseHover()"></div>
+
+    <h3>• Practice sorting of an array(sort method) (take array of strings)</h3>
+    <div id="div2"></div>
+
+    <h3>• reverse a string (use array method) (hello: olleh)</h3>
+    <div id="div3"></div>
+
+    <h3>• get the length of a string and make it uppercase ('hduej dij')</h3>
+    <div id="div4">
+        <input type="text" id="div4_input" placeholder="Enter a String"><br>
+        <button onclick="upperCase()">Make it to Uppercase</button>
+        <h4 id="div4_result"></h4>
+    </div>
+
+    <h3>• given year leap year or not (29 days in feb)</h3>
+    <div id="div5">
+        <input type="text" id="div5_input" placeholder="Enter a Year"><br>
+        <button onclick="leapYear()">Check</button>
+        <h4 id="div5_result"></h4>
+    </div>
+
+    <h3>• given alphabet is vowel(a, e, i , o ,u) or consonant</h3>
+    <div id="div6">
+        <input type="text" id="div6_input" placeholder="Enter a alphabet"><br>
+        <button onclick="isVowel()">Check</button>
+        <h4 id="div6_result"></h4>
+    </div>
+
+    <h3>• given number is multiple of 3 or not e.g. 10900</h3>
+    <div id="div7">
+        <input type="text" id="div7_input" placeholder="Enter a number"><br>
+        <button onclick="isMultiple()">Check</button>
+        <h4 id="div7_result"></h4>
+    </div>
+    <h3>• Write a js method, when user click on button, display random integer below it.</h3>
+    <div id="div8">
+        <button onclick="randomInt()">Generate random integer</button>
+        <h4 id="div8_result"></h4>
+    </div>
+    <h3>• write js function to format number up to specified decimal places. (100.987): 100.98</h3>
+    <div id="div9">
+        <input type="text" id="div9_input1" placeholder="Enter a number"><br>
+        <input type="text" id="div9_input2" placeholder="Enter a decimal places"><br>
+        <button onclick="formatDecimal()">Format</button>
+        <h4 id="div9_result"></h4>
+    </div>
+    <h3>•	write function to convert negative number to positive number</h3>
+    <div id="div10">
+        <input type="text" id="div10_input" placeholder="Enter a number"><br>
+        <button onclick="toPositive()">Convert</button>
+        <h4 id="div10_result"></h4>
+    </div>
+    <h3>•	write function to generate random background color of body</h3>
+    <div id="div11">
+        <button onclick="randomBg()">Generate random color</button>
+        <h4 id="div11_result"></h4>
+    </div>
+    <h3>•	0-6 display day week depending upon what user is entering 
+        (0 -> sunday)
+        </h3>
+        <div id="div12">
+            <input type="text" id="div12_input" placeholder="Enter a number (0 - 6)"><br>
+            <button onclick="dayOfWeek()">Show day of the week</button>
+            <h4 id="div12_result"></h4>
+        </div>
+        <h3>•	check particular word exist in a string. (includes/ match)
+        e.g: I am learning js. (js)
+        </h3>
+        <div id="div13">
+            <input type="text" id="div13_input1" placeholder="Enter a string"><br>
+            <input type="text" id="div13_input2" placeholder="Enter a word to check"><br>
+            <button onclick="matchStr()">Check</button>
+            <h4 id="div13_result"></h4>
+        </div>
+        <h3>•	fetch the index.html part of the URL of the current page. (hint: var url = window.location.href )</h3>
+    
+        <div id="div14">
+            <button onclick="fetchHtml()">Get URL of the current page</button>
+            <h4 id="div14_result"></h4>
+        </div>
+        <script src="./js/practice.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#div1{
+    background-color: teal;
+    height: 150px;
+
+}
+input,button{
+    font-size: 15px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+input{
+    background-color: antiquewhite;
+    border: 0;
+
+}
+div{
+    color: purple;
+}
