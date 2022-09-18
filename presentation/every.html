@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every</title>
+
+    <script>
+        var abc = [{
+            name: 'shaan',
+            role: 'developer',
+            company: 'valtech',
+            age: 21
+        },
+        {
+            name: 'sharan',
+            role: 'front-end',
+            company: 'valtech',
+            age: 25
+        },
+        { 
+            name: 'Ram',
+            role: 'Asst.developer',
+            company: 'valtech',
+            age: 18
+        }];
+        //    var z = abc.every((xyz) => {
+        //     return xyz.company === 'valtech'});  
+        
+        //     console.log(z);
+
+        var xyz = abc.every(allAge);
+        function allAge(){
+            return allAge.age == 18;
+        }
+        console.log(xyz);
+        
+        // document.getElementById("con").innerHTML = abc.every(allAge);
+
+
+        // var isSubset = (array1, array2) => array2.every((element) => array1.includes(element));
+
+        // console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 7, 6])); // true
+        // console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
+    
+    </script>
+</head>
+<body>
+    <div id="con"></div>
+</body>
+</html>
