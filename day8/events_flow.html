@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events flow</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: navy;
+            border: 1px solid transparent;
+        }
+        .nestedContainer{
+            width: 350px;
+            height: 200px;
+            background-color: mediumblue;
+            margin: 50px auto;
+            border: 1px solid transparent;
+        }
+        .box{
+            width: 200px;
+            height: 150px;
+            background-color: rgb(3, 3, 31);
+            margin: -225px auto;
+        }
+    </style>
+    <script>
+        function clickHandler(evt){
+        // alert("click handler working")
+        document.getElementById("abc").innerHTML += "<p>Type of Event :" + evt.currentTarget.getAttribute("class") + "</p>"
+    }
+
+        function init(){
+            document.getElementsByClassName("container")[0].addEventListener("click", clickHandler)
+            document.getElementsByClassName("nestedContainer")[0].addEventListener("click", clickHandler)
+            document.getElementsByClassName("box")[0].addEventListener("click", clickHandler)
+        }
+
+        document.addEventListener("DOMContentLoaded",init);
+    </script>
+</head>
+<body>
+    
+</body>
+    <div class="container">
+        <div class="nestedContainer"></div>
+        <div class="box">
+        </div>
+  </div>
+  <p id="abc"></p>
+</html>

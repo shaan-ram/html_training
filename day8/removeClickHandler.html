@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            margin: auto;
+            height: 500px;
+            width: 560px;
+            overflow: auto;
+            background-color:  aqua;
+        }
+        .container div{
+            background-color:  violet;
+            margin: 5px;
+            width: 100px;
+            height: 100px;
+            float: left;
+            line-height: 100px;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        var container =null;
+        var count = 1;
+        function removeSelectedBox(evt){
+            if( Number(evt.target.textContent)%2==0){
+            document.getElementsByClassName("container")[0].removeChild(evt.target)
+            }else{
+                alert("The number is odd")
+            }
+        }
+        function clickHandler(){
+          var box= document.createElement("div");
+          box.addEventListener("click",removeSelectedBox);
+          document.getElementsByClassName("container")[0].appendChild(box);
+          box.textContent = count;
+            count++;
+         }
+         function removeBox(){
+            var abc = document.getElementsByClassName("container")[0].firstChild
+            document.getElementsByClassName("container")[0].removeChild(abc);
+         }
+         function removefromBack(){
+            var abc = document.getElementsByClassName("container")[0].lastChild
+            document.getElementsByClassName("container")[0].removeChild(abc);
+         }
+        function init(){
+            document.getElementsByTagName("button")[0].addEventListener("click", clickHandler)
+            document.getElementsByTagName("button")[1].addEventListener("click", removeBox)
+            document.getElementsByTagName("button")[2].addEventListener("click", removefromBack)
+        }
+        document.addEventListener("DOMContentLoaded",init);
+    </script>
+    
+</head>
+<body>
+    <button>Add Box</button>
+    <!-- <button>Remove Box</button>
+    <button>Remove Box from back</button> -->
+    <div class="container"></div>
+</body>
+</html>

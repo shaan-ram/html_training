@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: auto;
+            height: 500px;
+            width: 560px;
+            overflow: auto;
+            background-color: yellowgreen;
+        }
+        .container div{
+            background-color: teal;
+            margin: 5px;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+    </style>
+    <script>
+        var count=1;
+        function clickHandler(){
+            var box = document.createElement("div");
+            document.getElementsByClassName("container")[0].appendChild(box);
+            box.textContent = count;
+            count++;
+            
+        }
+        function removeClickHandler(){
+            document.getElementsByTagName("button")[0].removeEventListener("click",clickHandler);
+        }
+        function init(){
+            document.getElementsByTagName("button")[0].addEventListener("click",clickHandler);
+            document.getElementsByTagName("button")[1].addEventListener("click", removeClickHandler);
+        }
+        document.addEventListener("DOMContentLoaded",init);
+
+    </script>
+</head>
+<body>
+    <button>Click here</button>
+    <button> Stop click handler</button>
+    <div class="container"></div>
+</body>
+</html>
