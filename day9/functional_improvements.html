@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+    // function addi(num1, num2){
+    //     var val = num1 || 0;
+    //     var va2 = num2 || 0;
+    //     return val1 + val2;
+    // }
+    // console.log(addi(4))
+
+
+    // function addi(num1=1, num2 =1){
+    //     return num1 * num2;
+    // }
+    // console.log(addi(4))
+
+    
+    // function addi(...numbs){
+    //     var tot = 0;
+    //     for(i=0; i<numbs.length; i++){
+    //         tot += numbs[i]
+    //     };
+       
+    //    return tot;
+    // };
+
+
+    function addi(...numbs){
+        return numbs.reduce(function(initval, val, index, array){
+            //console.log("Inital value", initval,"Value",val)
+            return initval+val;
+        })
+    }
+
+    console.log(addi(5));
+    console.log(addi(5,6));
+    console.log(addi(5,6,7));
+    console.log(addi(5,6,7,8));
+    console.log(addi(5,6,7,8,9));
+    console.log(addi(5,6,7,8,9,10));
+  
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

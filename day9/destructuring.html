@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<script>
+    const hero ={
+        title: "Thor",
+        power: 9,
+        superPower: "hammer"
+    }
+
+    // using ecma script
+
+    // var{title: herotitle, superPower:herosuperPower} = hero;
+    // console.log(herotitle) //Thor
+    // herotitle = "CaptainAmerica"
+    // console.log(herotitle) //CaptainAmerica
+    // herosuperPower= "shield"
+    // console.log(hero.value)
+
+    // function myHeros(){
+    //     return ['Thor','Ironman','Captain America','Hulk','Vision']
+    // }
+    // var [firstname,secondname,thirdname,fourthname,fifthname] = myHeros();
+    // console.log(thirdname)
+    
+    //functional_improvements
+
+    var alHero ={...hero}
+    alHero.title =" Captain America"
+    console.log(alHero.title);
+    </script>
+<body>
+    
+</body>
+</html>
