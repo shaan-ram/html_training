@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            width: 620px;
+            display: block;
+            margin: auto;
+            margin-top: 50px;
+            height: 30px;
+            font-weight: bold;
+
+
+        }
+        .box{
+            background-color: darkgray;
+            color: rgb(8, 98, 47);
+            text-align: justify;
+            overflow: auto;
+            width: 600px;
+            height: 400px;
+            margin: 10px auto;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener("readystatechange", readyStateChangeHandler);
+        function readyStateChangeHandler(){
+            console.log("state changed",xhr.readyState);
+            if(xhr.readyState === 4){
+                document.getElementsByClassName("box")[0].textContent = xhr.responseText
+            }
+        }
+        function clickHandler(){
+            xhr.send();
+        }
+
+        function init(){
+            xhr.open("get","data.txt",true);
+            document.getElementsByTagName("button")[0].addEventListener("click",clickHandler)
+        }
+
+        document.addEventListener("DOMContentLoaded",init)
+    </script>
+
+
+</head>
+<body>
+    <button>Click Here</button>
+    <div class="box"></div>
+</body>
+</html>

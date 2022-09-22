@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var numbs = [ ["hello","Hii",444] ,46]
+        // var itr = numbs[Symbol.iterator](); 
+        // var itr = numbs.values();
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+
+        setInterval(function(){
+            numbs.push(Math.round(Math.random() * 20));
+            document.getElementById("log").innerText = numbs.join();
+        },1000);
+
+        var itr = numbs.values();
+        function getVals(){
+            console.log(itr.next().value);
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="getVals()">Click Here</button>
+    <p id="log"></p>
+</body>
+</html>

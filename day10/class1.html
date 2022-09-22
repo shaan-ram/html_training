@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //es3
+        function Hero(fname,lname){
+            //private
+            var power = 9;
+            //public
+            this.firstname = fname;
+            this.lastname = lname;
+        }
+        Hero.prototype.fullname = function() {
+            return this.firstname+" "+this.lastname
+        }
+        let hero = new Hero ("Shaan","Ram")
+        console.log(hero.fullname())
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

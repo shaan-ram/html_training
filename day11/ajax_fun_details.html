@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        button{
+            width: 620px;
+            display: block;
+            margin: auto;
+            margin-top: 50px;
+            height: 30px;
+            font-weight: bold;
+        }
+        button:hover{
+            color: red;
+        }
+        .box{
+            background-color: darkgray;
+            color: rgb(8, 98, 47);
+            text-align: justify;
+            display: table;
+            width: 618px;
+            margin: 10px auto;
+            padding: 10px;
+        }
+       
+       .box  div{
+        background-color: rgb(19, 18, 18);
+        margin: 4px;
+        text-align: center;
+        line-height: 30px;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        width: 300px;
+        float: left;
+
+       
+       }
+       .box div:hover{
+        background-color: darkslategray;
+        color: chocolate;
+       }
+        
+    </style>
+
+    <script>
+
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener("readystatechange", readyStateChangeHandler);
+        function readyStateChangeHandler(){
+            console.log("state changed",xhr.readyState);
+            if(xhr.readyState === 4){
+                for(var i=0; i< xhr.responseXML.getElementsByTagName("participant").length; i++){
+                //document.getElementsByClassName("box")[0].innerHTML += "<div>"+xhr.responseXML.getElementsByTagName("participant")[i].getElementsByTagName("firstname")[0].firstChild.nodeValue+"</div>"
+                var participant = xhr.responseXML.getElementsByTagName("participant")[i];
+                document.getElementsByClassName("box")[0].innerHTML += document.getElementById("con").innerHTML
+                .replace("{firstname}",participant.querySelector("firstname").textContent)
+                .replace("{lastname}",participant.querySelector("lastname").textContent)
+                .replace("{email}",participant.querySelector("email").textContent)
+                .replace("{city}",participant.querySelector("city").textContent);
+
+                }
+            }
+        }
+        function clickHandler(){
+            xhr.send();
+        }
+
+        function init(){
+            xhr.open("get","data.xml",true);
+            document.getElementsByTagName("button")[0].addEventListener("click",clickHandler)
+        }
+
+        document.addEventListener("DOMContentLoaded",init)
+    </script>
+
+
+</head>
+<body>
+    <button>Click Here</button>
+    <div class="box">
+        <template id="con">
+            <div>{firstname} {lastname} <br>
+              {email} <br>{city}
+            </div>
+        </template>
+    </div>
+</body>
+</html>

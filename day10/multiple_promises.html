@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var firstPromise = function(){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    if(true){
+                        resolve("Resolve Message from First Promise")
+                    }else{
+                        reject("Reject error from first Promise")
+                    }
+                },4000)
+            })
+        }
+        var secondPromise = function(){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    if(true){
+                        resolve("Resolve Message from second Promise")
+                    }else{
+                        reject("Reject error from second Promise")
+                    }
+                })
+            },3000)
+        }
+        var thirdPromise = function(){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    if(true){
+                        resolve("Resolve Message from third Promise")
+                    }else{
+                        reject("Reject error from third Promise")
+                    }
+                })
+            },2000)
+        }
+
+        Promise.all([firstPromise(),secondPromise(),thirdPromise()])
+        .then(function(res){
+        console.log(res)})
+       
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
