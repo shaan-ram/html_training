@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+     img{
+        height: 600px;
+        width: 600px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .set{
+        display: block;
+        margin: auto;
+        width: 500px;
+        height: 500px;
+    }
+    h1{
+        text-align: center;
+        color: chartreuse;
+        border: 2px solid orangered;
+        width: 595px;
+        background-color: cornflowerblue;
+        
+    }
+    .drum{
+        color: chartreuse;
+        position: absolute;
+    }
+    .set .w{
+        margin-left: 230px;
+        margin-top: 180px;
+        font-size: 35px;
+        background-color: black;
+        padding: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    .set .a{
+        margin-left: 330px;
+        margin-top: 190px;
+        font-size: 35px;
+        background-color: black;
+        padding: 3px 8px;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    .set .d{
+        margin-left: 420px;
+        margin-top: 250px;
+        font-size: 35px;
+        background-color: black;
+        padding: 3px 8px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .set .j{
+        margin-left: 400px;
+        margin-top: 30px;
+        font-size: 35px;
+        background-color: black;
+        padding: 3px 8px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .set .z{
+        margin-left: 230px;
+        margin-top: 30px;
+        font-size: 35px;
+        background-color: black;
+        padding: 3px 8px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .set .k{
+        margin-left: 220px;
+        margin-top: 350px;
+        font-size: 35px;
+        background-color: black;
+        padding: 3px 8px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .set .l{
+        margin-left: 150px;
+        margin-top: 260px;
+        font-size: 35px;
+        background-color: black;
+        padding: 3px 8px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .a:hover,.w:hover, .d:hover, .j:hover, .k:hover ,.l:hover{
+        text-decoration: none!important;
+        user-select: none!important;
+        background-color: aqua !important;
+        color: orangered!important;
+    }
+    .z:hover{
+        text-decoration: none!important;
+        user-select: none!important;
+        background-color: aqua!important;
+        color: orangered!important;
+    }
+    body{
+        background-image: url('disco-background.jpg'); 
+    }
+</style>
+
+<body>
+    
+    <div class="set">
+        <h1 id="header">Play Drums</h1>
+        <p class="w drum" onclick="onClickSound('tom-1.mp3')">w</p>
+        <p class="a drum" onclick="onClickSound('tom-2.mp3')">a</p>
+        <p class="d drum" onclick="onClickSound('tom-3.mp3')">d</p>
+        <p class="j drum" onclick="onClickSound('crash.mp3')">j</p>
+        <p class="z drum" onclick="onClickSound('crash.mp3')">j</p>
+        <p class="k drum" onclick="onClickSound('kick-bass.mp3')">k</p>
+        <p class="l drum" onclick="onClickSound('snare.mp3')">l</p>
+        <img src="image.jpg" alt="Drumset">
+    </div>
+
+    <script>
+        document.addEventListener("keypress", function(event){
+            makeSound(event.key)
+        })
+        document.addEventListener("keyup", function(event){
+            //makeSound(event.key)
+            keyUpChange(event.key)
+        })
+
+            function keyUpChange(evt1){
+                if(evt1 === "w"|| evt1==="a"||evt1 === "d"||evt1 === "j"|| evt1 === "k"||evt1 === "l"){
+
+                
+                document.getElementsByClassName(evt1)[0].style.backgroundColor = "black"
+                document.getElementsByClassName(evt1)[0].style.color = "chartreuse"
+                }
+                if(evt1 === "j"){
+            document.getElementsByClassName("z")[0].style.backgroundColor = "black"
+                document.getElementsByClassName("z")[0].style.color = "chartreuse"
+                }
+            }
+        function colorChange(evt){
+            document.getElementsByClassName(evt)[0].style.backgroundColor = "cyan"
+                document.getElementsByClassName(evt)[0].style.color = "red"
+                if(evt === "j"){
+            document.getElementsByClassName("z")[0].style.backgroundColor = "cyan"
+                document.getElementsByClassName("z")[0].style.color = "red"
+                }
+        }
+        function onClickSound( val){
+            var tom1 = new Audio("sounds/"+val);
+                tom1.play();
+        }
+        function makeSound(key){
+            switch(key){
+            case "w":
+                colorChange("w")
+                var tom1 = new Audio("sounds/tom-1.mp3");
+                tom1.play();
+                break;
+
+                case "a":
+                colorChange("a")
+                var tom2 = new Audio("sounds/tom-2.mp3");
+                tom2.play();
+                break;
+
+                case "d":
+                colorChange("d")
+                var tom3 = new Audio("sounds/tom-3.mp3");
+                tom3.play();
+                break;
+
+                case "j":
+                colorChange("j")
+                var crash = new Audio("sounds/crash.mp3");
+                crash.play();
+                break;
+
+                case "k":
+                colorChange("k")
+                var bass = new Audio("sounds/kick-bass.mp3");
+                bass.play();
+                break;
+
+
+                case "l":
+                colorChange("l")
+                var snare = new Audio("sounds/snare.mp3");
+                snare.play();
+                break;
+
+                default: console.log(key);
+            }
+        }
+
+
+    </script>
+</body>
+</html>
