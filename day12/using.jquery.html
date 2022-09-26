@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+     ol li{
+        border: 2px solid orangered
+    }
+    .par2{
+        border: 2px solid blue;
+    }
+   </style>
+    <script src="lib/jquery-3.6.1.js" ></script>
+    <script>
+        // $(()=> {
+            //$("p").css("border","2px solid orange")
+            // $("li.box2").css("border","2px solid blue")
+            // $("ul:first").css("border","2px solid blue")
+            //$("ul:last").css("border","2px solid blue")
+            //$("li:even").css("border","2px solid blue")
+            //$("li:odd").css("border","2px solid blue")
+            // $("li:eq(3)").css("border","2px solid blue")
+            // $("li:gt(3)").css("border","2px solid blue")
+            // $("li:lt(3)").css("border","2px solid blue")
+            // $(":header").css("border","2px solid blue")
+            //$("ol li:not(.box3)").css("border","2px solid blue")
+            //$("ol li:not(.box3)").css("border","2px solid blue")
+            // $("ol:has(.box3)").css("border","2px solid blue")
+            //$("ol li[class = 'box2']").css("border","2px solid blue")       ///Attribute
+        // })
+
+                
+                        //Traverse
+                    
+            $(()=> {
+                // $(".list3").append("Hello");
+                // $(".box3").append($(".box1").text());
+                // $(".box4").prepend($(".box3").text());
+                $(".par2").appendTo($(".box3"));
+                // $(".box4").prependTo($(".box3"));
+
+            });
+
+                          //wrap unwrap
+            $(()=>{
+                // $(".box1").wrap(".par2")
+                // $(".par2").wrapAll(".box3")
+                // $(".box1").unwrap(".par2")
+                $(".box1").wrapInner(".par2")
+            })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+        <li>List item 5</li>
+        <li>List item 6</li>
+    </ul>
+    <h1>Welcome</h1>
+    <ol>
+        <li class="box1">Box1</li>
+        <li class="box2">Box2</li>
+        <li class="box3">Box3</li>
+        <li class="box4">Box4</li>
+        <li class="box5">Box5</li>
+        <li class="box6">Box6</li>
+    </ol>
+    
+    <h2>All</h2>
+    <p id="par1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut doloribus iste minus incidunt? Ad unde ipsam dolores at repudiandae, atque commodi animi ratione libero laboriosam reiciendis, a expedita similique. Quos.</p>
+        
+    <p class="par2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut doloribus iste minus incidunt? Ad unde ipsam dolores at repudiandae, atque commodi animi ratione libero laboriosam reiciendis, a expedita similique. Quos.</p>
+    <h3>wasssup!!!</h3>
+</body>
+</html>
