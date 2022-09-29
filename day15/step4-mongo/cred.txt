@@ -1,0 +1,5 @@
+MongoDB
+user name: admin
+password: lJZcuuF2ce8idvpP
+
+mongodb+srv://admin:lJZcuuF2ce8idvpP@cluster0.ijqvhi3.mongodb.net/?retryWrites=true&w=majority
