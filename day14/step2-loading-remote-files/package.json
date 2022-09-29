@@ -1,0 +1,19 @@
+{
+    "name": "sharan_r",
+    "version": "1.0.0",
+    "description": "npm Practice",
+    "main": "1-node.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "npm",
+        "nodejs"
+    ],
+    "author": "Sharan",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.27.2",
+        "fetch": "^1.1.0"
+    }
+}
